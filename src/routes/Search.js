@@ -49,7 +49,7 @@ class Search extends React.Component {
       isLoading: false,
       lat: 37.506502,
       lon: 127.053617,
-      menus: [1, 2, 3, 4, 5],
+      menus: ["...", "...", "...", "...", "..."],
       weather: 1,
       weatherStatement: "이번 ",
       season: this.getSeason(),

@@ -41,3 +41,16 @@
   color: gray;
   opacity: 50%;
 }
+@media (max-width: 400px) {
+  /*가로 너비가 400px 이하일 때 아래 스타일 적용*/
+  .toggle-button {
+    border-radius: 5px;
+    color: white;
+    margin: 10px 5px;
+    padding-top: 5px;
+    padding-bottom: 7px;
+    font-size:10px;
+    font-weight: 500;
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+}
