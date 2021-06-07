@@ -10,7 +10,8 @@ class Weather extends React.Component {
     const { season } = this.props;
     const { weatherStatement } = this.props;
     return (
-      <div className="js-input">
+      <div id="weather-container">
+        
         <span id="weather">{weatherStatement}</span>
         <span id="day">{season}엔,</span>
       </div>

@@ -393,10 +393,12 @@ class Search extends React.Component {
         <div className="top">
           <div className="back">
             <i class="orange large angle left icon"></i>
-            <a className="backtitle" href="/">이전</a>
+            <a className="backtitle" href="/">
+              이전
+            </a>
           </div>
         </div>
-        <div>          
+        <div>
           <header className="title2">
             <Weather season={season} weatherStatement={weatherStatement} />
           </header>
