@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap");
 .foodList {
   display: flex;
   justify-content: center;
 }
 
 .foodName {
-  font-size: 27px;
-  line-height:150%;
+  font-size: 20px;
+  line-height: 150%;
   font-weight: 700;
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
 }

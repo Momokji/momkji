@@ -40,6 +40,7 @@ class Main extends React.Component {
             <button
               style={{ width: 130, height: 40 }}
               className="button search_button ui inverted orange"
+              id="search-button"
             >
               장소로 검색하기
             </button>

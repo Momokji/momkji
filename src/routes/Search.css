@@ -60,30 +60,28 @@ h1 {
 }
 #day {
 }
-.top{
-  width:100%;
+.top {
+  width: 100%;
   /* background-color: blanchedalmond; */
   display: flex;
   justify-content: center;
   margin-bottom: 40px;
 }
-.top .back{
-  width:60%;
+.top .back {
+  width: 60%;
   justify-content: left;
   display: flex;
   /* background-color: blue; */
 }
-.backtitle{
+.backtitle {
   /* background-color: red; */
   font-size: 20px;
   color: rgb(228, 119, 55);
   font-weight: 500;
   font-family: "Noto Sans KR", sans-serif;
-  
 }
-.backtitle:hover{
+.backtitle:hover {
   color: orange;
-  
 }
 .title2 {
   /* margin:30px; */
@@ -93,15 +91,13 @@ h1 {
   justify-content: center;
 }
 .food-list {
-  justify-content: center;
-  /* background-color: red; */
 }
 .howabout {
-  margin-top: 10px;
+  margin-top: 15px;
 
   font-size: 25px;
   text-align: center;
-  font-weight: 500;
+  font-weight: 700;
   font-family: "Noto Sans KR", sans-serif;
 }
 .js-input {
@@ -131,6 +127,9 @@ h1 {
   margin-right: 20px;
 }
 .main .sidebar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   visibility: hidden;
   min-height: 500px;
   background-color: white;
@@ -143,13 +142,13 @@ h1 {
 }
 @media (max-width: 1000px) {
   /*가로 너비가 600px 이하일 때 아래 스타일 적용*/
-  .top .back{
-    width:90%;
+  .top .back {
+    width: 90%;
     justify-content: left;
     display: flex;
     /* background-color: blue; */
   }
-  
+
   header {
     width: auto;
   }
