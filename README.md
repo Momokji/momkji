@@ -17,62 +17,77 @@ momokji는 무엇을 먹을지 고민하는 분들을 위해 개발되었습니�
 
   메뉴 추천에 그치지 않고, 해당 메뉴들을 판매하는 음식점까지 알려주어 보다 편리합니다.
 
-## 사용한 기술
+## 사용한 기술 또는 API
 
 - React
 - node.js (express)
 - MySQL
 - AWS EC2
+- Kakao API [링크](https://developers.kakao.com/)
+- 공공데이터 날씨 API [링크](https://www.data.go.kr/)
 
 ## 구현 기능
 
-- 작성 예정
+- 현재 사용자의 위치 또는 입력한 주소 중 사용자가 선택할 수 있음
+- 해당 지역의 날씨에 기반하여 음식 추천
+- 추천 음식을 판매하는 음식점의 위치를 맵마커를 통해 제공
+- 마커를 클릭하여 음식점에 관한 더 자세한 정보 제공
 
 ## Installation
 
 1. Clone the repo.
 
-```bash
-git clone http://khuhub.khu.ac.kr/momokji/momokji
-```
+   ```bash
+   git clone http://khuhub.khu.ac.kr/momokji/momokji
+   ```
 
 2. Install npm packages.
 
-```bash
-npm install
-```
+   ```bash
+   npm install
+   ```
 
 3. Create new file named `.env` and enter API_keys as below.
 
-> .env 파일 작성요령
+- .env 파일 작성요령
 
-```
-DB_PASS = {MySQL Password}
+  ```
+  DB_PASS = {MySQL Password}
 
-REACT_APP_KAKAOMAP_API = {Kakao JavaScript API Key}
-REACT_APP_KAKAO_REST_API_KEY = {Kakao REST API Key}
-REACT_APP_KAKAO_INIT = {Kakao REST API Key}
-WEATHER_KEY = {Weather API key} (수정필요)
-```
+  REACT_APP_KAKAOMAP_API = {Kakao JavaScript API Key}
+  REACT_APP_KAKAO_REST_API_KEY = {Kakao REST API Key}
+  REACT_APP_KAKAO_INIT = {Kakao REST API Key}
+  WEATHER_KEY = {data.go.kr API key}
+  ```
 
 4. Create new tables using MySQL as below.
 
-> DATABASE(MySQL) 설정 방법
+- DATABASE(MySQL) 설정 방법
 
-```bash
-mysql -u username -p
-```
+  ```bash
+  mysql -u username -p
+  ```
 
-```sql
-create database nodejs;
-use nodejs;
-source rain.sql;
-source seasons.sql;
-```
+  ```sql
+  create database nodejs;
+  use nodejs;
+  source rain.sql;
+  source seasons.sql;
+  ```
 
 5. Run the scripts.
 
-```bash
-node server/server
-npm start
-```
+   ```bash
+   node server/server
+   npm start
+   ```
+
+## Contact
+
+- Kangho Noh
+
+  [github](https://github.com/kangho-Noh)
+
+- Yoonjong Lee
+
+  [github](https://github.com/LEEYOONJONG)
