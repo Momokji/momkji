@@ -390,14 +390,22 @@ class Search extends React.Component {
     } = this.state;
     return (
       <div className="container">
-        <header className="title2">
-          <Weather season={season} weatherStatement={weatherStatement} />
-        </header>
+        <div className="top">
+          <div className="back">
+            <i class="orange large angle left icon"></i>
+            <a className="backtitle" href="/">이전</a>
+          </div>
+        </div>
+        <div>          
+          <header className="title2">
+            <Weather season={season} weatherStatement={weatherStatement} />
+          </header>
+        </div>
         <div className="food-list">
           {menus.map((menu) => (
             <Foodlist foodname={menu} />
           ))}
-          <p className="howabout">은 어떠세요?</p>
+          <p className="howabout">어떠세요?</p>
         </div>
         <div className="map-container">
           <div id="main" className="main">

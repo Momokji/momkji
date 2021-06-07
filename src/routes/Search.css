@@ -60,7 +60,26 @@ h1 {
 }
 #day {
 }
-
+.top{
+  width:100%;
+  /* background-color: blanchedalmond; */
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.top .back{
+  width:60%;
+  justify-content: left;
+  display: flex;
+  /* background-color: blue; */
+}
+.backtitle{
+  /* background-color: red; */
+  font-size: 20px;
+  color: rgb(228, 119, 55);
+  font-weight: 500;
+  font-family: "Noto Sans KR", sans-serif;
+}
 .title2 {
   /* margin:30px; */
   margin-bottom: 30px;
@@ -119,6 +138,13 @@ h1 {
 }
 @media (max-width: 1000px) {
   /*가로 너비가 600px 이하일 때 아래 스타일 적용*/
+  .top .back{
+    width:90%;
+    justify-content: left;
+    display: flex;
+    /* background-color: blue; */
+  }
+  
   header {
     width: auto;
   }
