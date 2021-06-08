@@ -24,7 +24,7 @@ momokji는 무엇을 먹을지 고민하는 분들을 위해 개발되었습니�
 - MySQL
 - AWS EC2
 - Kakao API [링크](https://developers.kakao.com/)
-- 공공데이터 날씨 API [링크](https://www.data.go.kr/)
+- OpenWeather [링크](https://openweathermap.org/)
 
 ## 구현 기능
 

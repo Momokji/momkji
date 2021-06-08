@@ -69,32 +69,31 @@ class Search extends React.Component {
 
   decodeWeather = (weather) => {
     let statement = "";
-    switch (weather) {
-      case 0:
-        statement = "화창한 ";
-        break;
-      case 1:
-        statement = "비가 오는 ";
-        break;
-      case 2:
-        statement = "진눈개비 오는 ";
-        break;
-      case 3:
-        statement = "눈 오는 ";
-        break;
-      case 4:
-        statement = "소나기 내리는 ";
-        break;
-      case 5:
-        statement = "빗방울이 떨어지는 ";
-        break;
-      case 6:
-        statement = "비바람이 몰아치는 ";
-        break;
-      case 7:
-        statement = "눈발이 거센 ";
-        break;
+    if (200 <= weather && weather < 300) {
+      statement = "번개가 치는 ";
     }
+    else if (300 <= weather && weather < 400) {
+      statement = "이슬비가 오는 ";
+    }
+    else if (500 <= weather && weather < 600) {
+      statement = "비가 오는 ";
+    }
+    else if (600 <= weather && weather < 700) {
+      statement = "눈이 오는 ";
+    }
+    else if (700 <= weather && weather < 800) {
+      statement = "날씨가 안 좋은 ";
+    }
+    else if (800 == weather) {
+      statement = "화창한 ";
+    }
+    else if (801 <= weather && weather <=802){
+      statement = "구름 낀 "
+    }
+    else {
+      statement = "구름 많은 "
+    }
+     
     return statement;
   };
 
@@ -222,7 +221,7 @@ class Search extends React.Component {
     var ps = new kakao.maps.services.Places();
     console.log("넘어온 데이터는 : ", weather);
     var rainy = 0;
-    if (weather) rainy = 1;
+    if (weather==5 || weather==6) rainy = 1;
     // 맑을 경우 디비 호출
     fetch(`http://localhost:3001/database${rainy}`, {
       method: "post",
