@@ -59,7 +59,7 @@ momokji는 무엇을 먹을지 고민하는 분들을 위해 개발되었습니�
   REACT_APP_KAKAOMAP_API = {Kakao JavaScript API Key}
   REACT_APP_KAKAO_REST_API_KEY = {Kakao REST API Key}
   REACT_APP_KAKAO_INIT = {Kakao REST API Key}
-  WEATHER_KEY = {data.go.kr API key}
+  WEATHER_KEY = {openweathermap API key}
   ```
 
 4. Create new tables using MySQL as below.
@@ -93,3 +93,6 @@ momokji는 무엇을 먹을지 고민하는 분들을 위해 개발되었습니�
 - Yoonjong Lee
 
   [github](https://github.com/LEEYOONJONG)
+
+## 참고한 자료
+  논문 : [날씨 및 요일 특성이 음식점 메뉴 검색시스템 이용에 미치는 영향에 관한 실증 연구(조찬열, 정구임, 서양민, 최혜림)](https://www.koreascience.or.kr/article/JAKO201720636501085.pdf)

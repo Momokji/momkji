@@ -221,7 +221,7 @@ class Search extends React.Component {
     var ps = new kakao.maps.services.Places();
     console.log("넘어온 데이터는 : ", weather);
     var rainy = 0;
-    if (weather==5 || weather==6) rainy = 1;
+    if ((200<=weather && weather<=202) || (230<=weather && weather<=232) || (300<=weather && weather<700)) rainy = 1;
     // 맑을 경우 디비 호출
     fetch(`http://localhost:3001/database${rainy}`, {
       method: "post",
