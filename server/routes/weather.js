@@ -5,15 +5,8 @@ const weather = (_weather, callback) => {
     let _lat = _weather.lat;
     let _lon = _weather.lon;
     let _calcDate = calcDate();
-    var url = 'http://apis.data.go.kr/1360000/VilageFcstInfoService/getVilageFcst';
-    var queryParams = '?' + encodeURIComponent('ServiceKey') + process.env.WEATHER_KEY; /* Service Key*/
-    queryParams += '&' + encodeURIComponent('pageNo') + '=' + encodeURIComponent('1'); /* */
-    queryParams += '&' + encodeURIComponent('numOfRows') + '=' + encodeURIComponent('10'); /* */
-    queryParams += '&' + encodeURIComponent('dataType') + '=' + encodeURIComponent('JSON'); /* */
-    queryParams += '&' + encodeURIComponent('base_date') + '=' + encodeURIComponent(_calcDate.yeardate); /* */
-    queryParams += '&' + encodeURIComponent('base_time') + '=' + encodeURIComponent(_calcDate.time); /* */
-    queryParams += '&' + encodeURIComponent('nx') + '=' + encodeURIComponent(Math.round(_lat)); /* */
-    queryParams += '&' + encodeURIComponent('ny') + '=' + encodeURIComponent(Math.round(_lon)); /* */
+    var url = 'http://api.openweathermap.org/data/2.5/weather?';
+    var queryParams = 'lat='+_lat+'&lon='+_lon+'&appid='+process.env.WEATHER_KEY;
     console.log("weather.js의 ", _lat, ", ", _lon);
     console.log("접속하는 weather JSON은 ", url+queryParams);
     console.log("날씨 API에 request를 보내고 응답을 기다리는 중입니다...");
@@ -25,11 +18,14 @@ const weather = (_weather, callback) => {
         //console.log('Headers', JSON.stringify(response.headers));
         // console.log('Reponse received -->', body);
         console.log("응답이 완료됐습니다.");
+        console.log("json.parse : ", JSON.parse(body));
         var bodyObj = JSON.parse(body);
-        console.log("--> 날씨는", bodyObj.response.body.items.item[1].fcstValue, "입니다.");
+        console.log("bodyobj는 ", bodyObj);
+        var weatherNum = parseInt(bodyObj.weather[0].id);
+        console.log("--> 날씨는", weatherNum.toString(), "입니다.");
         // 강수형태(PTY) 코드 : 없음(0), 비(1), 비/눈(2), 눈(3), 소나기(4), 빗방울(5), 빗방울/눈날림(6), 눈날림(7)
         callback(undefined, {
-            weather: bodyObj.response.body.items.item[1].fcstValue
+            weather: weatherNum.toString()
         })
     });
 }
