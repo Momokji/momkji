@@ -89,6 +89,9 @@ momokji는 무엇을 먹을지 고민하는 분들을 위해 개발되었습니�
    node server/server
    npm start
    ```
+   
+## Demo
+https://2017104013.oss2021.tk:3000/
 
 ## Contact
 
