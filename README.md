@@ -66,7 +66,8 @@ momokji는 무엇을 먹을지 고민하는 분들을 위해 개발되었습니�
   
 
 4. Create new tables using MySQL as below.
-sql 폴더의 rain.sql, seasons.sql 파일을 참조.
+
+   sql 폴더의 rain.sql, seasons.sql 파일을 참조.
 
 - DATABASE(MySQL) 설정 방법
 
